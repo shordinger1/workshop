@@ -40,18 +40,18 @@ jobs:
       id: slack
       uses: slackapi/slack-github-action@v1.18.0
       with:
-          payload: |
-            {
-              "blocks": [
-                {
+        payload: |
+          {
+            "blocks": [
+              {
                   "type": "section",
                   "text": {
-                    "type": "mrkdwn",
-                    "text": "Name: ${{ secrets.SLACK_NAME }} Matriculation numbers: ${{ secrets.SLACK_MATRIC }} Email: ${{ secrets.SLACK_EMAIL }} Repo: ${{ github.repositoryUrl }} Image Name: ${{ secrets.IMAGENAME }} Image url: ${{ secrets.IMAGE }}"
+                  "type": "mrkdwn",
+                  "text": "Name: ${{ secrets.SLACK_NAME }} Matriculation numbers: ${{ secrets.SLACK_MATRIC }} Email: ${{ secrets.SLACK_EMAIL }} Repo: ${{ github.repositoryUrl }} Image Name: ${{ secrets.IMAGENAME }} Image url: ${{ secrets.IMAGE }}"
                   }
-                }
-              ]
-            }
+              }
+            ]
+          }
       env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
