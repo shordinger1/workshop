@@ -47,7 +47,7 @@ jobs:
                   "type": "section",
                   "text": {
                   "type": "mrkdwn",
-                  "text": "Name: ${{ secrets.SLACK_NAME }} Matriculation numbers: ${{ secrets.SLACK_MATRIC }} Email: ${{ secrets.SLACK_EMAIL }} Repo: ${{ github.repositoryUrl }} Image Name: ${{ secrets.IMAGENAME }} Image url: ${{ secrets.IMAGE }}"
+                  "text": "Name: ${{ secrets.SLACK_NAME }} \nMatriculation numbers: ${{ secrets.SLACK_MATRIC }} \nEmail: ${{ secrets.SLACK_EMAIL }} \nRepo: ${{ github.repositoryUrl }} \nImage Name: ${{ secrets.IMAGENAME }} Image url: ${{ secrets.IMAGE }}"
                   }
               }
             ]
